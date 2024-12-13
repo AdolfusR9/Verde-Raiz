@@ -1,205 +1,183 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verde Raiz</title>
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
   <style>
-    /* Estilo para las tarjetas con rejilla responsiva */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-    .card {
-      width: 100%;
-      max-width: 100%;
+    /* Ajustes generales para la página */
+    body {
+      font-family: "Century Gothic", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
     }
 
-    /* Diseño responsivo para texto y botones */
-    @media screen and (max-width: 768px) {
-      h2, h3 {
-        font-size: 1.2rem;
-      }
-      .w3-button {
-        padding: 8px;
-      }
+    /* Estilo para la barra de navegación */
+    .navbar {
+      background-color: #343232;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
 
-    /* Mejoras en la barra de navegación para dispositivos móviles */
-    .w3-bar .w3-button {
-      padding: 14px;
-    }
-
-    .w3-bar-item {
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
       font-size: 18px;
     }
 
-    /* Menú desplegable en móviles */
+    .navbar a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    /* Diseño responsivo del menú */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+    }
+
     @media screen and (max-width: 768px) {
-      .w3-bar .w3-bar-item {
-        display: block;
-        text-align: center;
-      }
-
-      .w3-bar .w3-bar-item:not(:first-child) {
+      .navbar-menu {
         display: none;
-      }
-
-      .w3-bar .w3-bar-item:first-child {
-        display: block;
+        flex-direction: column;
+        background-color: #343232;
+        position: absolute;
+        top: 50px;
+        left: 0;
         width: 100%;
+        z-index: 1;
       }
 
-      .w3-bar-item.open {
+      .navbar-menu.open {
+        display: flex;
+      }
+
+      .menu-toggle {
         display: block;
       }
     }
+
+    /* Contenedor de tarjetas */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #343232;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body class="w3-2021-ultimate-gray">
+<body>
 
   <!-- Barra de navegación -->
-  <div class="w3-panel w3-padding-16 w3-bar">
-    <div class="w3-sand w3-top w3-hide-small">
-      <div class="w3-bar w3-slargew3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-        <ul class="w3-ul">
-          <a href="index.html" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-plane"></i> Productos</a>
-          <a href="nosotros.html" class="w3-bar-item w3-button w3-xlarge">Nosotros</a>
-          <a href="contacto.html" class="w3-bar-item w3-button w3-xlarge">Contacto</a>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Menú hamburguesa para móviles -->
-    <div class="w3-bar w3-hide-large w3-hide-medium">
-      <a href="javascript:void(0);" class="w3-bar-item w3-button" onclick="toggleMenu()">☰ Menu</a>
-    </div>
-
-    <div id="menuMobile" class="w3-bar w3-hide-large w3-hide-medium" style="display:none;">
-      <a href="index.html" class="w3-bar-item w3-button">Productos</a>
-      <a href="nosotros.html" class="w3-bar-item w3-button">Nosotros</a>
-      <a href="contacto.html" class="w3-bar-item w3-button">Contacto</a>
+  <div class="navbar">
+    <a href="index.html" class="logo">Verde Raiz</a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="navbar-menu">
+      <a href="index.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
     </div>
   </div>
 
   <!-- Contenido principal -->
   <div class="w3-container">
     <div class="w3-panel w3-sand w3-round-xlarge">
-      <center><br><img src="Logo_Verde_Raiz.png" width="70" height="70"><h2>Dale vida a tus espacios, el verde empieza aquí</h2></center>
-      <center><h3>Verde Raiz es un vivero que promueve las prácticas en beneficio de la biodiversidad y el cuidado del medio ambiente, ofreciendo productos de buena calidad y excelente servicio al cliente.</h3><br></center>
+      <center>
+        <br><img src="Logo_Verde_Raiz.png" width="70" height="70">
+        <h2>Dale vida a tus espacios, el verde empieza aquí</h2>
+      </center>
+      <center>
+        <h3>Verde Raiz es un vivero que promueve las prácticas en beneficio de la biodiversidad y el cuidado del medio ambiente, ofreciendo productos de buena calidad y excelente servicio al cliente.</h3>
+        <br>
+      </center>
     </div>
   </div>
 
-  <!-- Contenedor de tarjetas con destinos -->
+  <!-- Contenedor de tarjetas -->
   <div class="card-container">
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="huaesteca.html" class="w3-bar-item w3-button">
-        <img src="img/huaesteca1.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>La Huasteca Potosina <br> San Luis Potosí</h3>
-      </div>
+    <div class="card">
+      <img src="img/huaesteca1.jpg" alt="Huasteca">
+      <h3>La Huasteca Potosina</h3>
+      <p>San Luis Potosí</p>
     </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="acapulco.html" class="w3-bar-item w3-button">
-        <img src="img/acapulco.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Acapulco De Juárez <br> Guerrero</h3>
-      </div>
+    <div class="card">
+      <img src="img/acapulco.jpg" alt="Acapulco">
+      <h3>Acapulco De Juárez</h3>
+      <p>Guerrero</p>
     </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
+    <div class="card">
+      <img src="img/cancun.jpg" alt="Cancún">
+      <h3>Cancún</h3>
+      <p>Quintana Roo</p>
     </div>
-    <!-- Agregar más tarjetas aquí según sea necesario -->
   </div>
 
-  <!-- Contacto -->
-  <div class="w3-container w3-light-grey">
-    <table width="95%" height="30%" style="padding: 10px">
-      <tr>
-        <td>
-          <ul style="font-family: Century Gothic">
-            <h2>Contacta con nosotros</h2>
-            <h3>5570668167</h3>
-            <h3>5544688570</h3>
-          </ul>
-        </td>
-        <td>
-          <ul style="font-family: Century Gothic;">
-            <h2>Visítanos en</h2>
-            <a href="https://www.facebook.com/israel.rs.5?milbextid=ZbWKwl"><img src="facebook.jpg" width="30" height="30"></a>&nbsp&nbsp&nbsp
-            <a href="https://instagram.com/excursiontourmx?igshid=NTc4MTIwNjQ2YQ=="><img src="instagram.png" width="30" height="30"></a>&nbsp&nbsp&nbsp
-            <a href="https://www.tiktok.com/@excursiontourmx?_t=8d9RoDO2jZ8&_r=1"><img src="tiktok.png" width="30" height="30"></a>
-          </ul>
-        </td>
-        <td>
-          <ul style="font-family: Arial;">
-            <p style="font-family: Century Gothic;">VerdeRaiz.us@gmail.com</p>
-            <div class="w3-container">
-              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey">Desarrollo</button>
-              <div id="id01" class="w3-modal w3-animate-opacity">
-                <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-sand">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
-                    <h2>Desarrollo</h2>
-                  </header>
-                  <div class="w3-container w3-2021-ultimate-gra">
-                    <table width="95%" height="95%" style="padding: 10px; background-color: B3BFB4;">
-                      <tr>
-                        <td 1 class="w3-center w3-animate-left">
-                          <center><img src="Logo_TESCo.png" width="400" height="400"></center>
-                        </td>
-                        <td 2>
-                          <ul style="font-family: Century Gothic;">
-                            <div class="w3-container w3-animate-opacity">
-                              <font color="343232">
-                                <h3>Desarrolladores:</h3>
-                                <h3>Cruz Saldaña Jose Adolfo</h3>
-                                <h3>Magdaleno Simon Marisol</h3>
-                                <h3>Moreno Valdes Yesli Amiritzia</h3>
-                                <h3>Ramos Chavez Marcos Levi</h3>
-                                <h3>Tecnologías de la Información y Comunicación</h3>
-                                <h3>Parcial 3</h3>
-                                <h3>TICs</h3>
-                                <h3>Asesor:</h3>
-                                <h3>Mtra. Carrasco Bello Karla Isabel</h3>
-                              </font>
-                            </div>
-                          </ul>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ul>
-        </td>
-      </tr>
-    </table>
-    <br><br>
-    <center><img src="logo.png" width="200" height="60"></center>
-    <br><br>
-  </div>
+  <!-- Pie de página -->
+  <footer>
+    <p>Contacta con nosotros: 5570668167 | 5544688570</p>
+    <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
+    <p>
+      <a href="https://www.facebook.com">Facebook</a> |
+      <a href="https://www.instagram.com">Instagram</a> |
+      <a href="https://www.tiktok.com">TikTok</a>
+    </p>
+    <p>Desarrollado por el equipo de Verde Raiz</p>
+  </footer>
 
-  <!-- Script para el menú móvil -->
+  <!-- Script para el menú desplegable -->
   <script>
     function toggleMenu() {
-      var menu = document.getElementById("menuMobile");
-      if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "block";
-      } else {
-        menu.style.display = "none";
-      }
+      const menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('open');
     }
   </script>
 
