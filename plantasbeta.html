@@ -23,6 +23,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
+      position: fixed; /* Hace que la barra sea fija */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
     }
 
     .navbar a {
@@ -68,6 +74,11 @@
       .menu-toggle {
         display: block;
       }
+    }
+
+    /* Espaciado para compensar la barra fija */
+    .content {
+      margin-top: 60px; /* Ajusta esta altura al tamaño de la barra de navegación */
     }
 
     /* Contenedor de tarjetas */
@@ -125,20 +136,6 @@
       <a href="index.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-    </div>
-  </div>
-
-  <!-- Contenido principal -->
-  <div class="w3-container">
-    <div class="w3-panel w3-sand w3-round-xlarge">
-      <center>
-        <br><img src="Logo_Verde_Raiz.png" width="70" height="70">
-        <h2>Dale vida a tus espacios, el verde empieza aquí</h2>
-      </center>
-      <center>
-        <h3>Verde Raiz es un vivero que promueve las prácticas en beneficio de la biodiversidad y el cuidado del medio ambiente, ofreciendo productos de buena calidad y excelente servicio al cliente.</h3>
-        <br>
-      </center>
     </div>
   </div>
 
