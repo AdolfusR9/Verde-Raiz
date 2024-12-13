@@ -27,6 +27,36 @@
         padding: 8px;
       }
     }
+
+    /* Mejoras en la barra de navegación para dispositivos móviles */
+    .w3-bar .w3-button {
+      padding: 14px;
+    }
+
+    .w3-bar-item {
+      font-size: 18px;
+    }
+
+    /* Menú desplegable en móviles */
+    @media screen and (max-width: 768px) {
+      .w3-bar .w3-bar-item {
+        display: block;
+        text-align: center;
+      }
+
+      .w3-bar .w3-bar-item:not(:first-child) {
+        display: none;
+      }
+
+      .w3-bar .w3-bar-item:first-child {
+        display: block;
+        width: 100%;
+      }
+
+      .w3-bar-item.open {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body class="w3-2021-ultimate-gray">
@@ -41,6 +71,17 @@
           <a href="contacto.html" class="w3-bar-item w3-button w3-xlarge">Contacto</a>
         </ul>
       </div>
+    </div>
+
+    <!-- Menú hamburguesa para móviles -->
+    <div class="w3-bar w3-hide-large w3-hide-medium">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button" onclick="toggleMenu()">☰ Menu</a>
+    </div>
+
+    <div id="menuMobile" class="w3-bar w3-hide-large w3-hide-medium" style="display:none;">
+      <a href="index.html" class="w3-bar-item w3-button">Productos</a>
+      <a href="nosotros.html" class="w3-bar-item w3-button">Nosotros</a>
+      <a href="contacto.html" class="w3-bar-item w3-button">Contacto</a>
     </div>
   </div>
 
@@ -68,62 +109,6 @@
       </a>
       <div class="w3-container w3-center">
         <h3>Acapulco De Juárez <br> Guerrero</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
-      </div>
-    </div>
-    <div class="w3-white w3-card-4 w3-button card">
-      <a href="cancun.html" class="w3-bar-item w3-button">
-        <img src="img/cancun.jpg" class="w3-round-large" style="width:100%">
-      </a>
-      <div class="w3-container w3-center">
-        <h3>Cancún <br> Quintana Roo</h3>
       </div>
     </div>
     <div class="w3-white w3-card-4 w3-button card">
@@ -205,6 +190,18 @@
     <center><img src="logo.png" width="200" height="60"></center>
     <br><br>
   </div>
+
+  <!-- Script para el menú móvil -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menuMobile");
+      if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
