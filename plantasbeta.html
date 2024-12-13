@@ -199,7 +199,6 @@
   </div>
   
 
-  <!-- Pie de página -->
   <footer>
     <p>Contacta con nosotros: 5570668167 | 5544688570</p>
     <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
@@ -208,14 +207,29 @@
       <a href="https://www.instagram.com">Instagram</a> |
       <a href="https://www.tiktok.com">TikTok</a>
     </p>
-    <p>Desarrollado por el equipo de Verde Raiz</p>
+    <p>
+      <a href="#" onclick="openModal()">Desarrollado por el equipo de Verde Raiz</a>
+    </p>
   </footer>
 
-  <!-- Script para el menú desplegable -->
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <img src="img/plantel.jpg" alt="Plantel Verde Raiz">
+      <h2>Equipo de Desarrollo</h2>
+      <p>Juan Pérez, Ana Gómez, Luis Ramírez</p>
+      <button class="close-btn" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Script para abrir y cerrar la ventana modal -->
   <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.navbar-menu');
-      menu.classList.toggle('open');
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
     }
   </script>
 
