@@ -147,52 +147,59 @@
       <p>San Luis Potosí</p>
     </div>
     <div class="card">
-      <img src="plantas.jpg" alt="Acapulco">
+      <img src="Plantas.png" alt="Acapulco">
       <h3>Acapulco De Juárez</h3>
       <p>Guerrero</p>
     </div>
     <div class="card">
-      <img src="cancun.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
   </div>
       <div class="card">
-      <img src="planytas.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
   </div>
       <div class="card">
-      <img src="plantas.jpg" alt="Cancún">
-      <h3>Cancún</h3>
-      <p>Quintana Roo</p>
-    </div>
-  </div>
-  </div>
-      <div class="card">
-      <img src="plantas.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
   </div>
   </div>
       <div class="card">
-      <img src="plantas.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
   </div>
   </div>
       <div class="card">
-      <img src="plantas.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
   </div>
   </div>
       <div class="card">
-      <img src="plantas.jpg" alt="Cancún">
+      <img src="Plantas.png" alt="Cancún">
+      <h3>Cancún</h3>
+      <p>Quintana Roo</p>
+    </div>
+  </div>
+  </div>
+      <div class="card">
+      <img src="Plantas.png" alt="Cancún">
+      <h3>Cancún</h3>
+      <p>Quintana Roo</p>
+    </div>
+  </div>
+  </div>
+      <div class="card">
+      <img src="Plantas.png" alt="Cancún">
       <h3>Cancún</h3>
       <p>Quintana Roo</p>
     </div>
@@ -207,29 +214,14 @@
       <a href="https://www.instagram.com">Instagram</a> |
       <a href="https://www.tiktok.com">TikTok</a>
     </p>
-    <p>
-      <a href="#" onclick="openModal()">Desarrollado por el equipo de Verde Raiz</a>
-    </p>
+    <p>Desarrollado por el equipo de Verde Raiz</p>
   </footer>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <img src="img/plantel.jpg" alt="Plantel Verde Raiz">
-      <h2>Equipo de Desarrollo</h2>
-      <p>Juan Pérez, Ana Gómez, Luis Ramírez</p>
-      <button class="close-btn" onclick="closeModal()">Cerrar</button>
-    </div>
-  </div>
-
-  <!-- Script para abrir y cerrar la ventana modal -->
+  <!-- Script para el menú desplegable -->
   <script>
-    function openModal() {
-      document.getElementById('modal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('open');
     }
   </script>
 
