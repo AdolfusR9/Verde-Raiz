@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Verde Raíz - Semillas</title>
+  <title>Verde Raiz</title>
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    /* Ajustes generales para la página */
     body {
       font-family: "Century Gothic", Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #F0F0F0;
     }
+
+    /* Estilo para la barra de navegación */
     .navbar {
       background-color: #343232;
       color: white;
@@ -20,26 +23,65 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      position: fixed;
+      position: fixed; /* Hace que la barra sea fija */
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
     }
+
     .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
       font-size: 18px;
     }
+
     .navbar a:hover {
       background-color: #555;
       border-radius: 5px;
     }
-    .content {
-      margin-top: 70px;
+
+    /* Diseño responsivo del menú */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
     }
+
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #343232;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar-menu.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Espaciado para compensar la barra fija */
+    .content {
+      margin-top: 60px; /* Ajusta esta altura al tamaño de la barra de navegación */
+    }
+
+    /* Contenedor de tarjetas */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -47,6 +89,7 @@
       margin: 20px;
       padding: 10px;
     }
+
     .card {
       background-color: white;
       border: 1px solid #ddd;
@@ -56,11 +99,14 @@
       text-align: center;
       padding: 10px;
     }
+
     .card img {
       width: 100%;
       height: auto;
       border-radius: 10px;
     }
+
+    /* Pie de página */
     footer {
       background-color: #343232;
       color: white;
@@ -68,11 +114,13 @@
       padding: 20px 10px;
       margin-top: 20px;
     }
+
     footer a {
       color: white;
       text-decoration: none;
       margin: 0 10px;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
@@ -81,7 +129,8 @@
 <body>
   <!-- Barra de navegación -->
   <div class="navbar">
-    <a href="index.html" class="logo">Verde Raíz</a>
+    <a href="index.html" class="logo">Verde Raiz</a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <div class="navbar-menu">
       <a href="index.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
@@ -89,69 +138,106 @@
     </div>
   </div>
 
-  <div class="content">
-    <div class="w3-container">
-      <div class="w3-panel w3-sand w3-round-xlarge">
-        <center>
-          <br>
-          <img src="Logo_Verde_Raiz.png" width="70" height="70">
-          <h2> Dale vida a tus espacios, el verde empieza aquí </h2>
-          <h3> Semillas para todos tus proyectos: selecciona la calidad, cultiva tus sueños. </h3>
-          <br>
-        </center>
-      </div>
-    </div>
-    <!-- Contenedor de tarjetas -->
-    <div class="card-container">
-      <!-- Contenedores de semillas -->
-      <div class="card">
-        <img src="semilla1.jpg" alt="Semilla de Aguacate">
-        <h3>Semilla de Aguacate <br> $50 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla2.jpg" alt="Semilla de Mango">
-        <h3>Semilla de Mango <br> $40 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla3.jpg" alt="Semilla de Lechuga">
-        <h3>Semilla de Lechuga <br> $30 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla4.jpg" alt="Semilla de Frijol">
-        <h3>Semilla de Frijol <br> $20 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla5.jpg" alt="Semilla de Chile">
-        <h3>Semilla de Chile <br> $25 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla6.jpg" alt="Semilla de Cilantro">
-        <h3>Semilla de Cilantro <br> $35 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla7.jpg" alt="Semilla de Pino">
-        <h3>Semilla de Pino <br> $45 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla8.jpg" alt="Semilla de Tomate">
-        <h3>Semilla de Tomate <br> $20 MXN</h3>
-      </div>
-      <div class="card">
-        <img src="semilla9.jpg" alt="Semilla de Manzanilla">
-        <h3>Semilla de Manzanilla <br> $25 MXN</h3>
-      </div>
-    </div>
+<center>  
+<div class="w3-container">
+  <div class="w3-panel w3-sand w3-round-xlarge">
+    <center><br><img src="Logo_Verde_Raiz.png" width="70" height="70"><h2> Dale vida a tus espacios, el verde empieza aquí </h2></center>
   </div>
+</div> 
 
-  <footer>
-    <p>Contacta con nosotros: 5570668167 | 5544688570</p>
-    <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
-    <p>
-      <a href="https://www.facebook.com">Facebook</a> |
-      <a href="https://www.instagram.com">Instagram</a> |
-      <a href="https://www.tiktok.com">TikTok</a>
-    </p>
-    <p>Desarrollado por el equipo de Verde Raíz</p>
-  </footer>
+<div class="card-container">
+  <!-- Semilla 1 -->
+  <a href="huaesteca.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla1.jpg" class="w3-round-large" alt="Semilla de Flor de Manzana">
+      <h3>Hortaflor - Semilla de Flor de Manzana - 0.3g<br>$25 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 2 -->
+  <a href="acapulco.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla2.jpg" class="w3-round-large" alt="Semilla de Lechuga">
+      <h3>Hortaflor - Semilla de Lechuga - 3g<br>$20 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 3 -->
+  <a href="cancun.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla3.jpg" class="w3-round-large" alt="Semilla de Jitomate">
+      <h3>Hortaflor - Semilla de Jitomate - 3g<br>$25 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 4 -->
+  <a href="huatulco.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla4.jpg" class="w3-round-large" alt="Semilla de Zanahoria">
+      <h3>Hortaflor - Semilla de Zanahoria - 4g<br>$25 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 5 -->
+  <a href="machu.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla5.jpg" class="w3-round-large" alt="Semilla de Chiles Habanero">
+      <h3>Hortaflor - Semilla de Chiles Habanero - 0.3g<br>$25 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 6 -->
+  <a href="guadalajara.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla6.jpg" class="w3-round-large" alt="Semilla de Fresa">
+      <h3>Hortaflor - Semilla de Fresa<br>$20 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 7 -->
+  <a href="queso.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla7.jpg" class="w3-round-large" alt="Semilla de Cilantro">
+      <h3>Hortaflor - Semilla de Cilantro - 12g<br>$25 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 8 -->
+  <a href="veracruz.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla8.jpg" class="w3-round-large" alt="Semilla de Frijol Ejotero">
+      <h3>Hortaflor - Semilla de Frijol Ejotero - 20g<br>$20 MXN</h3>
+    </div>
+  </a>
+
+  <!-- Semilla 9 -->
+  <a href="canon.html" class="w3-bar-item w3-button">
+    <div class="card">
+      <img src="semilla9.jpg" class="w3-round-large" alt="Semilla de Melón">
+      <h3>Hortaflor - Semilla de Melón - 6g<br>$25 MXN</h3>
+    </div>
+  </a>
+</div>
+
+</center>
+<footer>
+  <p>Contacta con nosotros: 5570668167 | 5544688570</p>
+  <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
+  <p>
+    <a href="https://www.facebook.com">Facebook</a> |
+    <a href="https://www.instagram.com">Instagram</a> |
+    <a href="https://www.tiktok.com">TikTok</a>
+  </p>
+  <p>Desarrollado por el equipo de Verde Raiz</p>
+  <br><br><img src="logo.png" width="200" height="60">
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
