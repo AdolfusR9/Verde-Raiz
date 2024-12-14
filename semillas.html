@@ -1,178 +1,189 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width,  initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verde Raiz</title>
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Century Gothic", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
 
+    .navbar {
+      background-color: #343232;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #343232;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar-menu.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .content {
+      margin-top: 60px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #343232;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<div class="w3-2021-ultimate-gray">
-
-
-<p align="right">
-<div class="w3-panel w3-padding-16 w3-bar ">
-<div class="w3-sand w3-top w3-hide-small">
-<div class="w3-bar w3-slargew3-black w3-opacity w3-hover-opcity-off" id="myNavbar">
-<ul class="w3-ul">
-   <a href="index.html" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-plane" ></i> Productos </a><a href="nosotros.html" class="w3-bar-item w3-button w3-xlarge"> Nosotros</a><a href="contacto.html" class="w3-bar-item w3-button w3-xlarge">Contacto</a>
-</ul>
-</p>
-</div>
-</div>
-</div>
-
-<div class="w3-container">
-  <div class="w3-panel w3-sand w3-round-xlarge">
-    <center><br><img src="Logo_Verde_Raiz.png" width="70" height="70"><h2> Dale vida a tus espacios, el verde empieza aquí </h2></center>
-  </div>
-</div>
-
-
-<center>
-         <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-                <a href="huaesteca.html" class="w3-bar-item w3-button"><img src="semilla1.jpg"  class="w3-round-large" alt="Norway" style="width:100%"></a>
-                <div class="w3-container w3-center">
-                  <h3>Hortaflor - Semilla de Flor <br>de Manzana - 0.3g<br> $25 MXN</h3>
-                </div>
-          </div>
-          &nbsp
-<div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="acapulco.html" class="w3-bar-item w3-button"><img src="semilla2.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semila de <br> Lechuga - 3g</h3><br> $20 MXN</h3>
+<body>
+  <!-- Barra de navegación -->
+  <div class="navbar">
+    <a href="index.html" class="logo">Verde Raiz</a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="navbar-menu">
+      <a href="index.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
     </div>
   </div>
-  &nbsp
-<div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="cancun.html" class="w3-bar-item w3-button"><img src="semilla3.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de <br>Jitomate  - 3g<br> $25 MXN</h3>
-    </div>
-  </div>
-  <br><br>
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="huatulco.html" class="w3-bar-item w3-button"><img src="semilla4.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de <br> Zanahoria - 4g</h3> <br> $25 MXN</h3>
-    </div>
-  </div>
-  &nbsp
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="machu.html" class="w3-bar-item w3-button"><img src="semilla5.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de <br> Chiles Habanero - 0.3g<br> $25 MXN</h3>
-    </div>
-  </div>
-  &nbsp
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="guadalajara.html" class="w3-bar-item w3-button"><img src="semilla6.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de<br>Fresa<br> $20 MXN</h3>
-    </div>
-  </div>
- <br><br> 
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="queso.html" class="w3-bar-item w3-button"><img src="semilla7.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de<br> Cilantro - 12g<br> $25 MXN</h3>
-    </div>
-  </div>
- &nbsp
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="veracruz.html" class="w3-bar-item w3-button"><img src="semilla8.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de<br>Frijol Ejotero - 20g<br> $20 MXN</h3>
-    </div>
-  </div>
-  &nbsp
-  <div class="w3-white w3-card-4 w3-button" style="width:31%" >
-    <a href="canon.html" class="w3-bar-item w3-button"><img src="semilla9.jpg" class="w3-round-large" alt="Norway" style="width:100%"></a>
-    <div class="w3-container w3-center">
-      <h3>Hortaflor - Semilla de<br>Melon - 6g<br> $25 MXN</h3>
-    </div>
-  </div>
-  <br><br>
-  </center>
 
-<div class="w3-container w3-light-grey">
-<table width="95%" height="30%"; style="padding: 10px">
-<tr>
-<td>
-<ul style="font-family: Century Gothic">
-<h2> Contactate con nosotros </h2>
-<h3>5570668167</h3>
-<h3>5544688570</h3>
-</u1>
-</td>
-<td>
-<ul style="font-family: Century Gothic;">
-<h2>Visitanos en</h2>
-<a href="https://www.facebook.com/israel.rs.5?milbextid=ZbWKwl"><img src="facebook.jpg" width="30" height="30"></a>&nbsp&nbsp&nbsp
-<a href="https://instagram.com/excursiontourmx?igshid=NTc4MTIwNjQ2YQ=="><img src="instagram.png" width="30" height="30"></a>&nbsp&nbsp&nbsp
-<a href="https://www.tiktok.com/@excursiontourmx?_t=8d9RoDO2jZ8&_r=1"><img src="tiktok.png" width="30" height="30"></a>
-</td>
-<td>
-<ul style="font-family: Arial;">
-<style>
-   a {
-      color:black;
-          text-decoration: none;
-   }
-</style>
-
-<p style="font-family: Century Gothic;">VerdeRaiz.us@gmail.com</p>
-<div class="w3-container">
-<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey">Desarrollo</button>
-<div id="id01" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-sand"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-large w3-display-topright">&times;</span>
-        <h2>Desarrollo</h2>
-      </header>
-      <div class="w3-container w3-2021-ultimate-gra">
-        <table width="95%" height="95%"; style="padding: 10px; background-color: B3BFB4;">
-<tr>
-<div class="w3-container">
-
-
-<td 1  class="w3-center w3-animate-left"><center><img src="Logo_TESCo.png" width="400" height="400">
-</div>
-</td>
-<td 2>
-<ul style="font-family: Century Gothic;">
-<div class="w3-container w3-animate-opacity">
-
-
- <font color="343232"> <h3> Desarrolladores: </h3>
-<h3> Cruz Salda&ntildea Jose Adolfo </h3>
-<h3> Magdaleno Simon Marisol </h3>
-<h3> Moreno Valdes Yesli Amiritzia</h3>
-<h3> Ramos Chavez Marcos Levi </h3>
-<h3> TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIÓN </h3>
-<h3> Parcial 3</h3><h3>TICs</h3>
-<h3> Asesor: </h3><h3>Mtra. Carrasco Bello Karla Isabel </h3>
-
-</div>
-</font>
-</a>
-</td>
-</table>
+  <div class="content">
+    <!-- Contenedor de tarjetas -->
+    <div class="card-container">
+      <div class="card">
+        <img src="semilla1.jpg" alt="Semilla de Girasol">
+        <h3>Semilla de Girasol</h3>
+        <p>$30 MXN</p>
+      </div>
+      <div class="card">
+        <img src="semilla2.jpg" alt="Semilla de Calabaza">
+        <h3>Semilla de Calabaza</h3>
+        <p>$25 MXN</p>
+      </div>
+      <div class="card">
+        <img src="semilla3.jpg" alt="Semilla de Tomate">
+        <h3>Semilla de Tomate</h3>
+        <p>$20 MXN</p>
+      </div>
+      <div class="card">
+        <img src="semilla4.jpg" alt="Semilla de Albahaca">
+        <h3>Semilla de Albahaca</h3>
+        <p>$35 MXN</p>
+      </div>
+      <div class="card">
+        <img src="semilla5.jpg" alt="Semilla de Cilantro">
+        <h3>Semilla de Cilantro</h3>
+        <p>$40 MXN</p>
+      </div>
+      <div class="card">
+        <img src="semilla6.jpg" alt="Semilla de Manzanilla">
+        <h3>Semilla de Manzanilla</h3>
+        <p>$50 MXN</p>
       </div>
     </div>
   </div>
-</div>
 
-</td>
-</tr>
-</table>
-<br>
-<br>
-<center>
-  <img src="logo.png"  width="200" height="60">
-</center>
-<br>
-<br>
-</div>
+  <footer>
+    <p>Contacta con nosotros: 5570668167 | 5544688570</p>
+    <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
+    <p>
+      <a href="https://www.facebook.com">Facebook</a> |
+      <a href="https://www.instagram.com">Instagram</a> |
+      <a href="https://www.tiktok.com">TikTok</a>
+    </p>
+    <p>Desarrollado por el equipo de Verde Raiz</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
