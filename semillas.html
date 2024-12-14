@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Verde Raiz</title>
+  <title>Verde Raíz - Semillas</title>
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
@@ -13,7 +13,6 @@
       padding: 0;
       background-color: #F0F0F0;
     }
-
     .navbar {
       background-color: #343232;
       color: white;
@@ -28,55 +27,19 @@
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
     .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
       font-size: 18px;
     }
-
     .navbar a:hover {
       background-color: #555;
       border-radius: 5px;
     }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .navbar-menu {
-      display: flex;
-      gap: 20px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .navbar-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #343232;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-      }
-
-      .navbar-menu.open {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
     .content {
-      margin-top: 60px;
+      margin-top: 70px;
     }
-
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -84,7 +47,6 @@
       margin: 20px;
       padding: 10px;
     }
-
     .card {
       background-color: white;
       border: 1px solid #ddd;
@@ -94,13 +56,11 @@
       text-align: center;
       padding: 10px;
     }
-
     .card img {
       width: 100%;
       height: auto;
       border-radius: 10px;
     }
-
     footer {
       background-color: #343232;
       color: white;
@@ -108,13 +68,11 @@
       padding: 20px 10px;
       margin-top: 20px;
     }
-
     footer a {
       color: white;
       text-decoration: none;
       margin: 0 10px;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
@@ -123,8 +81,7 @@
 <body>
   <!-- Barra de navegación -->
   <div class="navbar">
-    <a href="index.html" class="logo">Verde Raiz</a>
-    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <a href="index.html" class="logo">Verde Raíz</a>
     <div class="navbar-menu">
       <a href="index.html">Productos</a>
       <a href="nosotros.html">Nosotros</a>
@@ -133,37 +90,55 @@
   </div>
 
   <div class="content">
+    <div class="w3-container">
+      <div class="w3-panel w3-sand w3-round-xlarge">
+        <center>
+          <br>
+          <img src="Logo_Verde_Raiz.png" width="70" height="70">
+          <h2> Dale vida a tus espacios, el verde empieza aquí </h2>
+          <h3> Semillas para todos tus proyectos: selecciona la calidad, cultiva tus sueños. </h3>
+          <br>
+        </center>
+      </div>
+    </div>
     <!-- Contenedor de tarjetas -->
     <div class="card-container">
+      <!-- Contenedores de semillas -->
       <div class="card">
-        <img src="semilla1.jpg" alt="Semilla de Girasol">
-        <h3>Semilla de Girasol</h3>
-        <p>$30 MXN</p>
+        <img src="semilla1.jpg" alt="Semilla de Aguacate">
+        <h3>Semilla de Aguacate <br> $50 MXN</h3>
       </div>
       <div class="card">
-        <img src="semilla2.jpg" alt="Semilla de Calabaza">
-        <h3>Semilla de Calabaza</h3>
-        <p>$25 MXN</p>
+        <img src="semilla2.jpg" alt="Semilla de Mango">
+        <h3>Semilla de Mango <br> $40 MXN</h3>
       </div>
       <div class="card">
-        <img src="semilla3.jpg" alt="Semilla de Tomate">
-        <h3>Semilla de Tomate</h3>
-        <p>$20 MXN</p>
+        <img src="semilla3.jpg" alt="Semilla de Lechuga">
+        <h3>Semilla de Lechuga <br> $30 MXN</h3>
       </div>
       <div class="card">
-        <img src="semilla4.jpg" alt="Semilla de Albahaca">
-        <h3>Semilla de Albahaca</h3>
-        <p>$35 MXN</p>
+        <img src="semilla4.jpg" alt="Semilla de Frijol">
+        <h3>Semilla de Frijol <br> $20 MXN</h3>
       </div>
       <div class="card">
-        <img src="semilla5.jpg" alt="Semilla de Cilantro">
-        <h3>Semilla de Cilantro</h3>
-        <p>$40 MXN</p>
+        <img src="semilla5.jpg" alt="Semilla de Chile">
+        <h3>Semilla de Chile <br> $25 MXN</h3>
       </div>
       <div class="card">
-        <img src="semilla6.jpg" alt="Semilla de Manzanilla">
-        <h3>Semilla de Manzanilla</h3>
-        <p>$50 MXN</p>
+        <img src="semilla6.jpg" alt="Semilla de Cilantro">
+        <h3>Semilla de Cilantro <br> $35 MXN</h3>
+      </div>
+      <div class="card">
+        <img src="semilla7.jpg" alt="Semilla de Pino">
+        <h3>Semilla de Pino <br> $45 MXN</h3>
+      </div>
+      <div class="card">
+        <img src="semilla8.jpg" alt="Semilla de Tomate">
+        <h3>Semilla de Tomate <br> $20 MXN</h3>
+      </div>
+      <div class="card">
+        <img src="semilla9.jpg" alt="Semilla de Manzanilla">
+        <h3>Semilla de Manzanilla <br> $25 MXN</h3>
       </div>
     </div>
   </div>
@@ -176,14 +151,7 @@
       <a href="https://www.instagram.com">Instagram</a> |
       <a href="https://www.tiktok.com">TikTok</a>
     </p>
-    <p>Desarrollado por el equipo de Verde Raiz</p>
+    <p>Desarrollado por el equipo de Verde Raíz</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.navbar-menu');
-      menu.classList.toggle('open');
-    }
-  </script>
 </body>
 </html>
