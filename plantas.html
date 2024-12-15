@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Verde Raiz</title>
+  <title>Plantas</title>
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    /* Ajustes generales para la página */
     body {
       font-family: "Century Gothic", Arial, sans-serif;
       margin: 0;
@@ -15,7 +14,6 @@
       background-color: #F0F0F0;
     }
 
-    /* Estilo para la barra de navegación */
     .navbar {
       background-color: #343232;
       color: white;
@@ -23,12 +21,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      position: fixed; /* Hace que la barra sea fija */
+      position: fixed; 
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000; /* Asegura que esté por encima de otros elementos */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+      z-index: 1000; 
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .navbar a {
@@ -43,7 +41,6 @@
       border-radius: 5px;
     }
 
-    /* Diseño responsivo del menú */
     .menu-toggle {
       display: none;
       font-size: 24px;
@@ -76,12 +73,10 @@
       }
     }
 
-    /* Espaciado para compensar la barra fija */
     .content {
-      margin-top: 60px; /* Ajusta esta altura al tamaño de la barra de navegación */
+      margin-top: 60px; 
     }
 
-    /* Contenedor de tarjetas */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -106,7 +101,6 @@
       border-radius: 10px;
     }
 
-    /* Pie de página */
     footer {
       background-color: #343232;
       color: white;
@@ -127,13 +121,13 @@
   </style>
 </head>
 <body>
-  <!-- Barra de navegación -->
+
   <div class="navbar">
     <a href="index.html" class="logo">Verde Raiz</a>
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <div class="navbar-menu">
       <a href="index.html">Productos</a>
-      <a href="nosotros.html">Nosotros</a>
+      <a href="Nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
     </div>
   </div>
@@ -146,7 +140,6 @@
 </div> 
 
 	 <div class="card-container">
-  <!-- Contenedor 1 -->
   <a href="huaesteca.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta1.jpg" class="w3-round-large" alt="Mata de Aguacate" style="width:100%">
@@ -154,7 +147,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 2 -->
   <a href="acapulco.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta2.jpg" class="w3-round-large" alt="Mata de Mango" style="width:100%">
@@ -162,7 +154,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 3 -->
   <a href="cancun.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta3.jpg" class="w3-round-large" alt="Mata de Lechuga" style="width:100%">
@@ -170,7 +161,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 4 -->
   <a href="huatulco.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta4.jpg" class="w3-round-large" alt="Mata de Frijol" style="width:100%">
@@ -178,7 +168,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 5 -->
   <a href="machu.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta5.jpg" class="w3-round-large" alt="Mata de Chiles" style="width:100%">
@@ -186,7 +175,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 6 -->
   <a href="guadalajara.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta6.jpg" class="w3-round-large" alt="Mata de Cilantro" style="width:100%">
@@ -194,7 +182,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 7 -->
   <a href="queso.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta7.jpg" class="w3-round-large" alt="Pino" style="width:100%">
@@ -202,7 +189,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 8 -->
   <a href="veracruz.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta8.jpg" class="w3-round-large" alt="Mata de Tomate" style="width:100%">
@@ -210,7 +196,6 @@
     </div>
   </a>
 
-  <!-- Contenedor 9 -->
   <a href="canon.html" class="w3-bar-item w3-button">
     <div class="card">
       <img src="Planta9.jpg" class="w3-round-large" alt="Mata de Manzanilla" style="width:100%">
@@ -232,7 +217,6 @@
 	  <br><br><img src="logo.png"  width="200" height="60">
   </footer>
 
-  <!-- Script para el menú desplegable -->
   <script>
     function toggleMenu() {
       const menu = document.querySelector('.navbar-menu');
