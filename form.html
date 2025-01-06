@@ -79,11 +79,6 @@
       padding: 20px;
     }
 
-    .content img {
-      width: 70px;
-      height: 70px;
-    }
-
     .form-container {
       border: 2px solid #000;
       border-radius: 8px;
@@ -91,6 +86,7 @@
       width: 400px;
       margin: 20px auto;
       background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .form-header {
@@ -121,16 +117,22 @@
       margin-bottom: 5px;
     }
 
-    .form-group input {
+    .form-group input, .form-group select {
       width: 100%;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
 
-    .form-group input:focus {
+    .form-group input:focus, .form-group select:focus {
       border-color: #4caf50;
       outline: none;
+    }
+
+    .form-group .total {
+      font-weight: bold;
+      text-align: right;
+      background-color: #f0f0f0;
     }
 
     footer {
@@ -150,6 +152,11 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .styled-select {
+      appearance: none; /* Oculta la flecha predeterminada del navegador */
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -165,15 +172,14 @@
   </div>
 
   <div class="content">
-    <div class="w3-panel w3-sand w3-round-xlarge">
-      <img src="Logo_Verde_Raiz.png" alt="Logo Verde Raíz">
-    </div>
-
     <div class="form-container">
       <div class="form-header">
-        <h1>Formulario de Contacto</h1>
+        <img src="Logo_Verde_Raiz.png" alt="Logo Verde Raíz">
+        <h1>Formulario Verde Raíz</h1>
       </div>
+
       <form>
+        <!-- Información personal -->
         <div class="form-group">
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required>
@@ -186,7 +192,46 @@
           <label for="phone">Teléfono:</label>
           <input type="tel" id="phone" name="phone" required>
         </div>
+
+        <!-- Producto -->
+        <div class="form-group">
+          <label for="product">Producto:</label>
+          <select id="product" name="product" class="styled-select" onchange="calcularTotal()" required>
+            <option value="" disabled selected></option>
+            <option value="10">Mata Aguacate - $225</option>
+            <option value="15">Mata Mango - $250</option>
+            <option value="20">Mata Lechuga  - $250</option>
+            <option value="25">Mata Frijol - $25</option>
+            <option value="30">Mata Chiles - $25</option>
+            <option value="35">Mata Cilantro - $60</option>
+            <option value="40">Pino - $75</option>
+            <option value="45">Mata Tomate - $20</option>
+            <option value="50">Mata Manzanilla - $35</option>
+          </select>
+        </div>
+
+        <!-- Cantidad -->
+        <div class="form-group">
+          <label for="quantity">Cantidad:</label>
+          <input type="number" id="quantity" name="quantity" min="1" required>
+        </div>
+
+        <!-- Número de tarjeta -->
+        <div class="form-group">
+          <label for="card">Número de Tarjeta:</label>
+          <input type="text" id="card" name="card" maxlength="16" required>
+        </div>
+
+        <!-- Total -->
+        <div class="form-group">
+          <label for="total">Total:</label>
+          <input type="text" id="total" name="total" class="total" readonly>
+        </div>
       </form>
+
+      <div class="form-footer">
+        <p>Dale vida a tus espacios, el verde empieza aquí.</p>
+      </div>
     </div>
   </div>
 
@@ -199,13 +244,21 @@
       <a href="https://www.tiktok.com">TikTok</a>
     </p>
     <p>Desarrollado por el equipo de Verde Raíz</p>
-    <br><br><img src="logo.png"  width="200" height="60">
+    <img src="logo.png" width="200" height="60">
   </footer>
 
   <script>
     function toggleMenu() {
       const menu = document.querySelector('.navbar-menu');
       menu.classList.toggle('open');
+    }
+
+    function calcularTotal() {
+      const product = document.getElementById('product');
+      const quantity = document.getElementById('quantity').value || 0;
+      const total = document.getElementById('total');
+      const price = parseInt(product.value) || 0;
+      total.value = `$${price * quantity}`;
     }
   </script>
 
