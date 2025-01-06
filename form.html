@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plantas - Verde Raíz</title>
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Century Gothic", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
+
+    .navbar {
+      background-color: #343232;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #343232;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar-menu.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .content {
+      margin-top: 100px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .form-container {
+      border: 2px solid #000;
+      border-radius: 8px;
+      padding: 20px;
+      width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+    }
+
+    .form-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .form-header img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .form-header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
+
+    footer {
+      background-color: #343232;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="logo">Verde Raíz</a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="navbar-menu">
+      <a href="index.html">Productos</a>
+      <a href="Nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="w3-panel w3-sand w3-round-xlarge">
+      <img src="Logo_Verde_Raiz.png" alt="Logo Verde Raíz">
+      <h2>Dale vida a tus espacios, el verde empieza aquí</h2>
+    </div>
+
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Formulario de Contacto</h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contacta con nosotros: 5570668167 | 5544688570</p>
+    <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
+    <p>
+      <a href="https://www.facebook.com">Facebook</a> |
+      <a href="https://www.instagram.com">Instagram</a> |
+      <a href="https://www.tiktok.com">TikTok</a>
+    </p>
+    <p>Desarrollado por el equipo de Verde Raíz</p>
+    <br><br><img src="logo.png"  width="200" height="60">
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
