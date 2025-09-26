@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Plantas - Verde Raíz</title>
+  <title>Step Power</title>
+   <link rel="icon" href="PowerLogo.png" type="image/x-icon" />
+  <link rel="icon" href="PowerLogo.png" type="image/x-icon" />
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
@@ -162,7 +164,7 @@
 <body>
 
   <div class="navbar">
-    <a href="index.html" class="logo">Verde Raíz</a>
+    <a href="index.html" class="logo">Step Power</a>
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <div class="navbar-menu">
       <a href="index.html">Productos</a>
@@ -170,12 +172,12 @@
       <a href="contacto.html">Contacto</a>
     </div>
   </div>
-
+<center>
   <div class="content">
     <div class="form-container">
       <div class="form-header">
-        <img src="Logo_Verde_Raiz.png" alt="Logo Verde Raíz">
-        <h1>Verde Raíz</h1>
+        <img src="PoweLogo.png" alt="Logo Verde Raíz">
+        <h1>Step Power</h1>
       </div>
 
       <form>
@@ -198,15 +200,11 @@
           <label for="product">Producto:</label>
           <select id="product" name="product" class="styled-select" onchange="calcularTotal()" required>
             <option value="" disabled selected></option>
-            <option value="25">Semilla de Flor de Manzana - $25</option>
-            <option value="20">Semilla de Lechuga - $20</option>
-            <option value="25">Semilla de Jitomate  - $25</option>
-            <option value="25">Semilla de Zanahoria - $25</option>
-            <option value="25">Semilla de Chiles Habanero  - $25</option>
-            <option value="20">Semilla de Fresa - $20</option>
-            <option value="25">Semilla de Cilantro - $25</option>
-            <option value="20">Mata Tomate - $20</option>
-            <option value="25">Semilla de Melón  - $25</option>
+            <option value="225">Xiaomi Mi 20W Charger         - $160</option>
+            <option value="250">Cable USB-C                   - $56 MXN</option>
+            <option value="250">Cargador MagSafe              - $250 MXN</option>
+            <option value="25">V-TAC Power Bank               - $350 MXN</option>
+            <option value="25">Xiaomi power bank (10000mAh)   - $229 MXN</option>
           </select>
         </div>
 
@@ -234,31 +232,25 @@
       </div>
     </div>
   </div>
+</center>
 
   <footer>
     <p>Contacta con nosotros: 5570668167 | 5544688570</p>
-    <p>Correo: <a href="mailto:VerdeRaiz.us@gmail.com">VerdeRaiz.us@gmail.com</a></p>
+    <p>Correo: <a href="mailto:StepPower.us@gmail.com">StepPower.us@gmail.com</a></p>
     <p>
       <a href="https://www.facebook.com">Facebook</a> |
       <a href="https://www.instagram.com">Instagram</a> |
       <a href="https://www.tiktok.com">TikTok</a>
     </p>
-    <p>Desarrollado por el equipo de Verde Raíz</p>
-    <img src="logo.png" width="200" height="60">
+    <p>Desarrollado por el equipo de Step Power</p>
+    <br><br><img src="logo.png"  width="200" height="60">
   </footer>
 
+  <!-- Script para el menú desplegable -->
   <script>
     function toggleMenu() {
       const menu = document.querySelector('.navbar-menu');
       menu.classList.toggle('open');
-    }
-
-    function calcularTotal() {
-      const product = document.getElementById('product');
-      const quantity = document.getElementById('quantity').value || 0;
-      const total = document.getElementById('total');
-      const price = parseInt(product.value) || 0;
-      total.value = `$${price * quantity}`;
     }
   </script>
 
