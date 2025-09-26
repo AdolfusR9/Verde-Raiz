@@ -180,53 +180,31 @@
         <h1>Step Power</h1>
       </div>
 
-      <form>
-        <!-- Información personal -->
-        <div class="form-group">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Teléfono:</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
+      <form action="comprar.php" method="POST">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name" required>
 
-        <!-- Cantidad -->
-        <div class="form-group">
-          <label for="quantity">Cantidad:</label>
-          <input type="number" id="quantity" name="quantity" min="1" required>
-        </div>
+  <label for="email">Correo:</label>
+  <input type="email" id="email" name="email" required>
 
-        
-        <!-- Producto -->
-        <div class="form-group">
-          <label for="product">Producto:</label>
-          <select id="product" name="product" class="styled-select" onchange="calcularTotal()" required>
-            <option value="" disabled selected></option>
-            <option value="160">Xiaomi Mi 20W Charger         - $160</option>
-            <option value="56">Cable USB-C                   - $56 MXN</option>
-            <option value="250">Cargador MagSafe              - $250 MXN</option>
-            <option value="350">V-TAC Power Bank               - $350 MXN</option>
-            <option value="229">Xiaomi power bank (10000mAh)   - $229 MXN</option>
-          </select>
-        </div>
+  <label for="phone">Teléfono:</label>
+  <input type="tel" id="phone" name="phone" required>
 
-        <!-- Número de tarjeta -->
-        <div class="form-group">
-          <label for="card">Número de Tarjeta:</label>
-          <input type="text" id="card" name="card" maxlength="16" required>
-        </div>
+  <label for="product">Producto:</label>
+  <select id="product" name="product" required>
+    <option value="1">Xiaomi Mi 20W Charger - $160</option>
+    <option value="2">Cable USB-C - $56</option>
+    <option value="3">Cargador MagSafe - $250</option>
+    <option value="4">V-TAC Power Bank - $350</option>
+    <option value="5">Xiaomi Power Bank 10000mAh - $229</option>
+  </select>
 
-        <!-- Total -->
-        <div class="form-group">
-          <label for="total">Total:</label>
-          <input type="text" id="total" name="total" class="total" readonly>
-        </div>
-      </form>
+  <label for="quantity">Cantidad:</label>
+  <input type="number" id="quantity" name="quantity" min="1" required>
+
+  <button type="submit">Comprar</button>
+</form>
+
 
       <div class="form-footer">
         <p>Dale vida a tus espacios, el verde empieza aquí.</p>
@@ -259,6 +237,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
